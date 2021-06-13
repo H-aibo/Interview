@@ -1,35 +1,13 @@
 ## 欢迎来到海博博的小世界~
 > 感谢您愿意花时间来看我的简历
 
-+ 基本资料
-### Markdown
+### 练习方式
++ 手机：18236396925
++ 邮箱：haibobo1101@gmail.com
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### 基本资料
++ 姓名：海博
++ 年龄：23
++ 毕业院校：安阳工学院(2020毕业生)
++ 工作经验：两年
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/H-aibo/resume.hb/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
