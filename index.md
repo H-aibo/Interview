@@ -1,9 +1,7 @@
-## Welcome to GitHub Pages
+## 欢迎来到海博博的小世界~
+> 感谢您愿意花时间来看我的简历
 
-You can use the [editor on GitHub](https://github.com/H-aibo/resume.hb/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
++ 基本资料
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
