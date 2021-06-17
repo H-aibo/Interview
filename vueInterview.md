@@ -1,4 +1,4 @@
-1. vue的生命周期
+### 1. vue的生命周期
   > vue的生命周期主要分四个阶段：创建过程(beforeCreate, created)，挂载过程(beforeMount, mounted)，更新过程(beforeUpdate, updated)，销毁过程(beforeDestroy，destroyed)；
   > 在服务端渲染期间被调用的只有beforeCreate、created
   - beforeCreate（创建前）：当前生命周期el与data尚未初始化还不能访问data、computed、watch、methods上的方法和数据
@@ -11,4 +11,31 @@
   - deactivated：被keep-alive缓存的组件停用时调用
   - beforeDestroy（销毁前-常用）：实例销毁前调用`当前生命周期做一些移除操作。例如：监听的移除，定时器的移除，事件的绑定`
   - destroyed（销毁后）：当前生命周期数据与视图之间的关系将会断开
-  
+### 2. 项目中父子组件之间的生命周期的顺序
+  - 父子组件的生命周期中，首先走父组件的生命周期，当父组件的生命周期走完beforeMount（挂载前）这个函数时就会走子组件的生命周期，当子组件挂载完成后（执行完mounted）父组件在挂载dom节点
+### 3. 路由的钩子函数
+  > 钩子大致分为三种：全局守卫、路由独享守卫、组件独享守卫
+  - 全局守卫`就是能监听到全局的router动作`
+    - router.beforeEach路由前置时触发
+    ```js
+    const router = new VueRouter({ ... })
+    // to 要进入的目标路由对象
+    // from 当前的路由对象
+    // next resolve 这个钩子，next执行效果由next方法的参数决定
+    // next() 进入管道中的下一个钩子
+    // next(false) 中断当前导航
+    // next({path}) 当前导航会中断，跳转到指定path
+    // next(error) 中断导航且错误传递给router.onErr回调
+    // 确保前置守卫要调用next，否然钩子不会进入下一个管道
+    router.beforeEach((to, from, next) => {
+     // ...
+    })
+    ```
+    - router.afterEach 路由后置时触发
+    ```js
+    // 与前置守卫基本相同，不同的是没有next参数
+    router.afterEach((to, from) => {
+      // ...
+    })
+    ```
+  - 路由独享守卫
