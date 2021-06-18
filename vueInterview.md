@@ -16,15 +16,15 @@
 ### 3. 路由的钩子函数
   > 钩子大致分为三种：全局守卫、路由独享守卫、组件独享守卫
   - 全局守卫`就是能监听到全局的router动作`
-    - router.beforeEach路由前置时触发
+    - router.beforeEach路由前置时触发，每次每一个路由改变的时候都得执行一遍
     ```js
     const router = new VueRouter({ ... })
-    // to 要进入的目标路由对象
-    // from 当前的路由对象
-    // next resolve 这个钩子，next执行效果由next方法的参数决定
-    // next() 进入管道中的下一个钩子
+    // to:(Route路由对象)即将要进入的目标路由对象to对象下面的属性：path/param/query/hash/fullPath/matched/name/meta（在matched下，但是本例可以直接用）
+    // from:(Route路由对象)当前导航正要离开的路由
+    // next:(Function函数)一定要调用该方法来resolve这个钩子。调用方法：next(参数或者空)
+    // next(无参数的时候):进行管道中的下一个钩子，如果走到最后一个钩子函数，name导航的状态就是confirmed(确认的)
+    // next('/')或者next({path: '/'}):跳转到一个不同的地址。当前的导航被中断，然后进行一个新的导航
     // next(false) 中断当前导航
-    // next({path}) 当前导航会中断，跳转到指定path
     // next(error) 中断导航且错误传递给router.onErr回调
     // 确保前置守卫要调用next，否然钩子不会进入下一个管道
     router.beforeEach((to, from, next) => {
